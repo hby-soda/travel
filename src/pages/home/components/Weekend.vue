@@ -4,7 +4,7 @@
       <ul>
         <li
           class="item"
-          v-for="item of list"
+          v-for="item of weekendList"
           :key="item.id"
         >
           <div class="item-img">
@@ -25,25 +25,8 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data () {
-    return {
-      list: [{
-        id: '0001',
-        imgurl: 'https://imgs.qunarzz.com/sight/source/1505/19/58f233e11df7ef.jpg_r_640x214_6b42c9fc.jpg',
-        name: '西安必游TOP10',
-        desc: '寻长安梦，开启穿越的圆梦之旅'
-      }, {
-        id: '0002',
-        imgurl: 'https://imgs.qunarzz.com/sight/source/1511/14/1cf5dc2ecbfc16.jpg_r_640x214_b4b3a58a.jpg',
-        name: '最美丝路行',
-        desc: '情系西北，中国梦丝路行'
-      }, {
-        id: '0003',
-        imgurl: 'https://imgs.qunarzz.com/sight/source/1507/fe/679926851c309a.jpg_r_640x214_114816de.jpg',
-        name: '不一样的周末',
-        desc: '这个周末玩点不一样的'
-      }]
-    }
+  props: {
+    weekendList: Array
   }
 }
 </script>

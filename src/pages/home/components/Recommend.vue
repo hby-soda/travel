@@ -8,7 +8,7 @@
       <ul class="list">
         <li
           class="item"
-          v-for="item of list"
+          v-for="item of recommendList"
           :key="item.id"
         >
           <div class="item-img-wrapper">
@@ -51,49 +51,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      list: [{
-        id: '0001',
-        imgurl: 'https://imgs.qunarzz.com/sight/p0/1505/18/18ffcca94b1b7ca2.water.jpg_200x200_9b0d2dc4.jpg',
-        tag1: true,
-        tag2: false,
-        title: '长恨歌',
-        talknum: '9250',
-        pricenum: '198',
-        address: '',
-        desc: '帅的人都去过了😎，你还等什么~'
-      }, {
-        id: '0002',
-        imgurl: 'https://imgs.qunarzz.com/sight/p0/1602/de/de8400021b664c5390.img.jpg_200x200_46b16057.jpg',
-        tag1: true,
-        tag2: false,
-        title: '华清宫（华清池·骊山）',
-        talknum: '21797',
-        pricenum: '135',
-        address: '临潼区',
-        desc: '览盛唐宫阙，登骊山怀古，赏长恨歌舞'
-      }, {
-        id: '0003',
-        imgurl: 'https://imgs.qunarzz.com/sight/p0/1508/db/dbd0bef45fbc36b3.img.jpg_200x200_1b88abcf.jpg',
-        tag1: false,
-        tag2: true,
-        title: '大唐芙蓉园',
-        talknum: '18891',
-        pricenum: '85',
-        address: '曲江旅游...'
-      }, {
-        id: '0004',
-        imgurl: 'https://imgs.qunarzz.com/sight/p0/1411/1a/5582f9f24bc50b475a8cbda4c5ac8d24.water.jpg_200x200_a0d48950.jpg',
-        tag1: true,
-        tag2: false,
-        title: '秦始皇陵博物院（兵马俑）',
-        talknum: '70345',
-        pricenum: '267.8',
-        address: '临潼区',
-        desc: '世界第八大奇迹'
-      }]
-    }
+  props: {
+    recommendList: Array
   }
 }
 </script>

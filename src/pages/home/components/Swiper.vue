@@ -10,6 +10,9 @@
 <script>
 export default {
   name: 'HomeSwiper',
+  props: {
+    swiperList: Array
+  },
   data () {
     return {
       swiperOption: {
@@ -18,14 +21,7 @@ export default {
         autoplayDisableOnInteraction: false,
         speed: 500,
         pagination: '.swiper-pagination'
-      },
-      swiperList: [{
-        id: '0001',
-        imgUrl: 'https://imgs.qunarzz.com/piao/fusion/1806/fc/e47aa3e1c67bbc02.jpg_750x200_0f3eecf8.jpg'
-      }, {
-        id: '0002',
-        imgUrl: 'https://imgs.qunarzz.com/piao/fusion/1806/64/cc63aa526e8bb302.png_750x200_d32776c5.png'
-      }]
+      }
     }
   }
 }
