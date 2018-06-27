@@ -7,10 +7,12 @@
       </div>
       <div class="border-bottom">
         <ul class="list">
-          <li
+          <router-link
+            tag="li"
             class="item"
             v-for="item of recommendList"
             :key="item.id"
+            :to="'/detail/' + item.id"
           >
             <div class="item-img-wrapper">
               <img class="item-img" :src="item.imgurl"/>
@@ -43,7 +45,7 @@
               </p>
               <p class="item-desc">{{item.desc}}</p>
             </div>
-          </li>
+          </router-link>
         </ul>
       </div>
       <div class="btn">查看所有产品</div>
