@@ -3,16 +3,16 @@
       <div class="banner" @click="handleBannerClick">
         <img
           class="banner-img"
-          src="https://img1.qunarzz.com/sight/p0/1505/18/18ffcca94b1b7ca2.water.jpg_600x330_cd78f1b7.jpg"/>
+          :src="SightImg"/>
         <div class="banner-info">
-          <div class="banner-title">长恨歌</div>
+          <div class="banner-title">{{this.SightName}}</div>
         </div>
         <div class="banner-num">
           <span class="iconfont banner-icon">&#xe626;</span>
-          34
+          {{this.GallaryImg.length}}
         </div>
       </div>
-      <common-gallary :imgs="imgs" v-show="showGallary" @close="handleGallaryClose"></common-gallary>
+      <common-gallary :imgs="GallaryImg" v-show="showGallary" @close="handleGallaryClose"></common-gallary>
     </div>
 </template>
 
@@ -23,11 +23,14 @@ export default {
   components: {
     CommonGallary
   },
+  props: {
+    SightName: String,
+    SightImg: String,
+    GallaryImg: Array
+  },
   data () {
     return {
-      showGallary: false,
-      imgs: ['https://img1.qunarzz.com/sight/p0/1505/18/18ffcca94b1b7ca2.water.jpg_600x330_cd78f1b7.jpg',
-        'http://img1.qunarzz.com/sight/p0/1706/73/7349ea5c85af9d5ea3.img.png_r_800x800_2afd15e0.png']
+      showGallary: false
     }
   },
   methods: {
