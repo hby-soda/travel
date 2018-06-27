@@ -69,6 +69,7 @@ export default {
     font-size .4rem
     background rgba(0, 0, 0, .7)
   .header-fixed
+    z-index 2
     position fixed
     top 0
     left 0
