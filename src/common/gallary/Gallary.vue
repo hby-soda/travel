@@ -1,7 +1,7 @@
 <template>
     <div class="container" @click="handleGallaryClick">
       <div class="wrapper">
-        <swiper :options="swiperOptions">
+        <swiper :options="swiperOption">
           <swiper-slide v-for="(item, index) in imgs" :key="index">
             <img class="gallary-img" :src="item">
           </swiper-slide>
@@ -15,20 +15,15 @@
 export default {
   name: 'CommonGallary',
   props: {
-    imgs: {
-      type: Array,
-      default () {
-        return []
-      }
-    }
+    imgs: Array
   },
   data () {
     return {
-      swiperOptions: {
+      swiperOption: {
         pagination: '.swiper-pagination',
         paginationType: 'fraction',
         observeParents: true,
-        observe: true
+        observer: true
       }
     }
   },
@@ -61,6 +56,6 @@ export default {
       .gallary-img
         width 100%
       .swiper-pagination
-        bottom -3.6rem
+        bottom -1rem
         color #fff
 </style>
